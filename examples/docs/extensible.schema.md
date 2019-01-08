@@ -19,64 +19,70 @@ This is an extensible schema. It has `definitions`, that can be used in other sc
 
 | Property | Type | Group |
 |----------|------|-------|
-| [bar](#bar) | `string` | `https://example.com/schemas/extensible#/definitions/second` |
-| [foo](#foo) | `string` | `https://example.com/schemas/extensible#/definitions/first` |
+| [first](#first) | complex | `https://example.com/schemas/extensible#/definitions/` |
+| [second](#second) | complex | `https://example.com/schemas/extensible#/definitions/` |
 
-## bar
-
-A horse walks into it.
-
-`bar`
-
-* is optional
-* type: `string`
-* defined in this schema
-
-### bar Type
+## first
 
 
-`string`
-
-
-
-
-
-
-### bar Examples
-
-```json
-"whoo"
-```
-
-```json
-"hoo"
-```
-
-
-
-## foo
-
-A unique identifier given to every addressable thing.
-
-`foo`
+`first`
 
 * is optional
-* type: `string`
+* type: complex
 * defined in this schema
 
-### foo Type
+### first Type
 
-
-`string`
-
-
-
-
-
-
-### foo Example
+Unknown type ``.
 
 ```json
-"bar"
+{
+  "properties": {
+    "foo": {
+      "type": "string",
+      "examples": [
+        "bar"
+      ],
+      "description": "A unique identifier given to every addressable thing."
+    }
+  },
+  "simpletype": "complex"
+}
 ```
+
+
+
+
+
+## second
+
+
+`second`
+
+* is optional
+* type: complex
+* defined in this schema
+
+### second Type
+
+Unknown type ``.
+
+```json
+{
+  "properties": {
+    "bar": {
+      "type": "string",
+      "examples": [
+        "whoo",
+        "hoo"
+      ],
+      "description": "A horse walks into it."
+    }
+  },
+  "simpletype": "complex"
+}
+```
+
+
+
 

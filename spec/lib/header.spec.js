@@ -37,11 +37,11 @@ describe('Headers Integration Test', () => {
       properties: { 'foo':'bar', 'bar': 'baz' }
     };
 
-    const h = headers(schema, '/home/lars', '/home/lars/complex.schema.json');
+    const h = headers(schema, '../../examples', '../../examples/schemas/complex.schema.json');
 
     const result = `| Abstract | Extensible | Status | Identifiable | Custom Properties | Additional Properties | Defined In |
 |----------|------------|--------|--------------|-------------------|-----------------------|------------|
-| Can be instantiated | No | Experimental | No | Forbidden | Permitted | [complex.schema.json](complex.schema.json) |`;
+| Can be instantiated | No | Experimental | No | Forbidden | Permitted | [schemas/complex.schema.json](schemas/complex.schema.json) |`;
     expect(h.render()).toEqual(result);
   });
 

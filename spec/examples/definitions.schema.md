@@ -30,7 +30,7 @@ aks.
 
 | [Abstract](../abstract.md) | Extensible | [Status](../status.md) | Identifiable | Custom Properties | Additional Properties | Defined In |
 |----------------------------|------------|------------------------|--------------|-------------------|-----------------------|------------|
-| Can be instantiated | Yes | Experimental | Yes | Forbidden | Permitted | [definitions.schema.json](definitions.schema.json) |
+| Cannot be instantiated | Yes | Experimental | Yes | Forbidden | Permitted | [definitions.schema.json](definitions.schema.json) |
 
 # Definitions Properties
 
@@ -102,6 +102,52 @@ An about ids. It is meta. If you are confused, send an email to the address spec
 
 * format: `email` – email address (according to [RFC 5322, section 3.4.1](https://tools.ietf.org/html/rfc5322))
 
+
+
+
+
+
+# Definitions Definitions
+
+| Property | Type | Group |
+|----------|------|-------|
+| [myid](#myid) | complex | `https://example.com/schemas/definitions#/definitions/` |
+
+## myid
+
+
+`myid`
+
+* is optional
+* type: complex
+* defined in this schema
+
+### myid Type
+
+Unknown type ``.
+
+```json
+{
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uri-reference",
+      "description": "A unique identifier given to every addressable thing."
+    },
+    "@id": {
+      "type": "string",
+      "format": "uri",
+      "description": "An `id` with an `@` in front of it. The `@` stands for \"dot com\""
+    },
+    "meta:id": {
+      "type": "string",
+      "format": "email",
+      "description": "An about ids. It is meta. If you are confused, send an email to the address specified in this property value."
+    }
+  },
+  "simpletype": "complex"
+}
+```
 
 
 

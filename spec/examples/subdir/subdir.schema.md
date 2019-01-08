@@ -11,31 +11,41 @@ https://example.com/schemas/subdir/subdir
 
 A schema in a sub directory
 
-| [Abstract](../../abstract.md) | Extensible | [Status](../../status.md) | Custom Properties | Additional Properties | Defined In |
-|-------------------------------|------------|---------------------------|-------------------|-----------------------|------------|
-| Cannot be instantiated | Yes | Experimental | Forbidden | Permitted | [subdir/subdir.schema.json](subdir/subdir.schema.json) |
+| [Abstract](../../abstract.md) | Extensible | [Status](../../status.md) | Identifiable | Custom Properties | Additional Properties | Defined In |
+|-------------------------------|------------|---------------------------|--------------|-------------------|-----------------------|------------|
+| Cannot be instantiated | Yes | Experimental | No | Forbidden | Permitted | [subdir/subdir.schema.json](subdir/subdir.schema.json) |
 
 # Subdir Definitions
 
 | Property | Type | Group |
 |----------|------|-------|
-| [id](#id) | `string` | `https://example.com/schemas/subdir/subdir#/definitions/content` |
+| [content](#content) | complex | `https://example.com/schemas/subdir/subdir#/definitions/` |
 
-## id
+## content
 
-A unique identifier given to every addressable thing.
 
-`id`
+`content`
+
 * is optional
-* type: `string`
+* type: complex
 * defined in this schema
 
-### id Type
+### content Type
 
+Unknown type ``.
 
-`string`
-* format: `uri` – Uniformous Resource Identifier (according to [RFC3986](http://tools.ietf.org/html/rfc3986))
-
+```json
+{
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uri",
+      "description": "A unique identifier given to every addressable thing."
+    }
+  },
+  "simpletype": "complex"
+}
+```
 
 
 

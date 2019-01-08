@@ -13,7 +13,7 @@ This is an extending schema. It is extending another extending schema. It pulls 
 
 | [Abstract](../abstract.md) | Extensible | [Status](../status.md) | Identifiable | Custom Properties | Additional Properties | Defined In |
 |----------------------------|------------|------------------------|--------------|-------------------|-----------------------|------------|
-| Can be instantiated | Yes | Experimental | Yes | Forbidden | Permitted | [deepextending.schema.json](deepextending.schema.json) |
+| Cannot be instantiated | Yes | Experimental | Yes | Forbidden | Permitted | [deepextending.schema.json](deepextending.schema.json) |
 ## Schema Hierarchy
 
 * Deeply Extending `https://example.com/schemas/deepextending`
@@ -176,6 +176,41 @@ An about ids. It is meta. If you are confused, send an email to the address spec
 
 * format: `email` – email address (according to [RFC 5322, section 3.4.1](https://tools.ietf.org/html/rfc5322))
 
+
+
+
+
+
+# Deeply Extending Definitions
+
+| Property | Type | Group |
+|----------|------|-------|
+| [fourth](#fourth) | complex | `https://example.com/schemas/deepextending#/definitions/` |
+
+## fourth
+
+
+`fourth`
+
+* is optional
+* type: complex
+* defined in this schema
+
+### fourth Type
+
+Unknown type ``.
+
+```json
+{
+  "properties": {
+    "hey": {
+      "type": "string",
+      "description": "A unique identifier given to every addressable thing."
+    }
+  },
+  "simpletype": "complex"
+}
+```
 
 
 

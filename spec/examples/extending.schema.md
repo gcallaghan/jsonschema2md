@@ -13,7 +13,7 @@ This is an extending schema. It pulls `definitions` from other schemas.
 
 | [Abstract](../abstract.md) | Extensible | [Status](../status.md) | Identifiable | Custom Properties | Additional Properties | Defined In |
 |----------------------------|------------|------------------------|--------------|-------------------|-----------------------|------------|
-| Can be instantiated | Yes | Experimental | Yes | Forbidden | Permitted | [extending.schema.json](extending.schema.json) |
+| Cannot be instantiated | Yes | Experimental | Yes | Forbidden | Permitted | [extending.schema.json](extending.schema.json) |
 ## Schema Hierarchy
 
 * Extending `https://example.com/schemas/extending`
@@ -153,6 +153,45 @@ An about ids. It is meta. If you are confused, send an email to the address spec
 
 * format: `email` – email address (according to [RFC 5322, section 3.4.1](https://tools.ietf.org/html/rfc5322))
 
+
+
+
+
+
+# Extending Definitions
+
+| Property | Type | Group |
+|----------|------|-------|
+| [third](#third) | complex | `https://example.com/schemas/extending#/definitions/` |
+
+## third
+
+
+`third`
+
+* is optional
+* type: complex
+* defined in this schema
+
+### third Type
+
+Unknown type ``.
+
+```json
+{
+  "properties": {
+    "baz": {
+      "type": "string",
+      "title": "BAAAZ!",
+      "examples": [
+        "I'm just a humble example"
+      ],
+      "description": "This property has a unique name to demonstrate it's uniqueness."
+    }
+  },
+  "simpletype": "complex"
+}
+```
 
 
 

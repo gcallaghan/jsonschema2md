@@ -19,25 +19,33 @@ A schema in a sub directory
 
 | Property | Type | Group |
 |----------|------|-------|
-| [id](#id) | `string` | `https://example.com/schemas/subdir/subdir#/definitions/content` |
+| [content](#content) | complex | `https://example.com/schemas/subdir/subdir#/definitions/` |
 
-## id
+## content
 
-A unique identifier given to every addressable thing.
 
-`id`
+`content`
 
 * is optional
-* type: `string`
+* type: complex
 * defined in this schema
 
-### id Type
+### content Type
 
+Unknown type ``.
 
-`string`
-
-* format: `uri` – Uniformous Resource Identifier (according to [RFC3986](http://tools.ietf.org/html/rfc3986))
-
+```json
+{
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uri",
+      "description": "A unique identifier given to every addressable thing."
+    }
+  },
+  "simpletype": "complex"
+}
+```
 
 
 

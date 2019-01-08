@@ -19,32 +19,32 @@ This is an abstract schema. It has `definitions`, but does not declare any prope
 
 | Property | Type | Group |
 |----------|------|-------|
-| [bar](#bar) | `string` | `https://example.com/schemas/abstract#/definitions/second` |
-| [foo](#foo) | `string` | `https://example.com/schemas/abstract#/definitions/first` |
-| [nonfoo](#nonfoo) | `const` | `https://example.com/schemas/abstract#/definitions/first` |
+| [first](#first) | `object` | `https://example.com/schemas/abstract#/definitions/` |
+| [second](#second) | `object` | `https://example.com/schemas/abstract#/definitions/` |
 
-## bar
+## first
 
-A unique identifier given to every addressable thing.
 
-`bar`
+`first`
 
 * is optional
-* type: `string`
+* type: `object`
 * defined in this schema
 
-### bar Type
+### first Type
 
 
-`string`
+`object` with following properties:
+
+
+| Property | Type | Required |
+|----------|------|----------|
+| `foo`| string | Optional |
+| `nonfoo`| boolean | Optional |
 
 
 
-
-
-
-
-## foo
+#### foo
 
 A unique identifier given to every addressable thing.
 
@@ -52,9 +52,8 @@ A unique identifier given to every addressable thing.
 
 * is optional
 * type: `string`
-* defined in this schema
 
-### foo Type
+##### foo Type
 
 
 `string`
@@ -65,7 +64,9 @@ A unique identifier given to every addressable thing.
 
 
 
-## nonfoo
+
+
+#### nonfoo
 
 This is not foo.
 
@@ -73,13 +74,63 @@ This is not foo.
 
 * is optional
 * type: `const`
-* defined in this schema
 
 The value of this property **must** be equal to:
 
 ```json
 false
 ```
+
+
+
+
+
+
+
+
+
+
+## second
+
+
+`second`
+
+* is optional
+* type: `object`
+* defined in this schema
+
+### second Type
+
+
+`object` with following properties:
+
+
+| Property | Type | Required |
+|----------|------|----------|
+| `bar`| string | Optional |
+
+
+
+#### bar
+
+A unique identifier given to every addressable thing.
+
+`bar`
+
+* is optional
+* type: `string`
+
+##### bar Type
+
+
+`string`
+
+
+
+
+
+
+
 
 
 
